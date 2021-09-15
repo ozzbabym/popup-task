@@ -7,11 +7,6 @@ interface Data {
     data: Array<String>
 }
 
-interface TextReducer {
-    data: string[]
-    notification: boolean
-    show: boolean
-}
 
 
 function Popup(props: Data) {
@@ -22,14 +17,7 @@ function Popup(props: Data) {
     const clickExit = () => {
         dispatch({type: 'SHOW_POPUP', payload: false})
     }
-    const fiveMessageEnd = () => {
-        let data = props.data
-        let arrNew = []
-        for(let i = data.length-5; i <  data.length; i++) {
-            arrNew.push(data[i])
-        }
-        return arrNew
-    }
+    
 
     const showMore = () => {
         if(notificationArr) {

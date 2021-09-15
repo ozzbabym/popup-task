@@ -4,7 +4,7 @@ import App from './App';
 import {createStore} from 'redux'
 import {reducerText} from './redux/reducer'
 import { Provider } from 'react-redux';
-import { StrictMode } from 'react';
+
 
 
 const store = createStore(reducerText)

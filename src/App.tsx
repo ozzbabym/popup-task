@@ -21,6 +21,7 @@ function App() {
 
 
   const dispatch = useDispatch()
+  
   React.useEffect(() => {
     if(!state.show && state.notification) {
       setTimeout(()=>{

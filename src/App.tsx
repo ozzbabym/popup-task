@@ -6,6 +6,7 @@ import notiRed from './image/notification-red.png';
 import Popup from './components/Popup'
 
 
+
 interface State {
     data: Array<String>,
     show: boolean,
@@ -21,7 +22,7 @@ function App() {
 
 
   const dispatch = useDispatch()
-  
+
   React.useEffect(() => {
     if(!state.show && state.notification) {
       setTimeout(()=>{
@@ -42,10 +43,20 @@ function App() {
   }
 
 
+
+  //add sound
+  // const audio = new Audio('./sound/dilink.mp3')
+  // audio.load()
+  
+  // audio.play()
+  // console.log(audio.autoplay=true)
+  
+ 
+
   return (
     <div className="App">
       <div className="App-header">
-        <div></div>
+        <div><h1>Notification Task</h1></div>
         <div>
           <img src={ state.notification ? notiBlack : notiRed} className={state.notification ? 'image-notification' : 'image-rotate'}></img>
           <div className={state.show?'popup-show':'popup-hidden'}>
